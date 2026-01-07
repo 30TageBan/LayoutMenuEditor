@@ -1,0 +1,42 @@
+:host {
+  display: block;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.item.is-error .badge {
+  border-color: #b3261e;
+  color: #b3261e;
+}
+
+.item.is-warning .badge {
+  border-color: #b45309;
+  color: #b45309;
+}
+
+.msg {
+  flex: 1;
+}
+

@@ -1,0 +1,77 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Knopf Einstellungen</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    @if (!hasSelection()) {
+      <p>Wähle links einen Button aus, um ihn zu bearbeiten.</p>
+    }
+
+    <div class="actions">
+      <button
+        mat-button
+        type="button"
+        (click)="deleteSelected()"
+        [disabled]="!canDelete()"
+        aria-label="Ausgewählten TouchButton löschen"
+      >
+        Löschen
+      </button>
+    </div>
+
+    <form [formGroup]="form">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input type="text" matInput formControlName="name" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Farbe</mat-label>
+        <mat-select formControlName="color">
+          <mat-option [value]="null">Schwarz (Standart)</mat-option>
+          <mat-option value="PURPLE">Lila</mat-option>
+          <mat-option value="ORANGE">Orange</mat-option>
+          <mat-option value="BLUE">Blau</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="action-group" role="group" aria-label="Action">
+        <div class="action-label">Action</div>
+        <mat-radio-group formControlName="action" aria-label="Action auswählen" class="action-radios">
+          <mat-radio-button value="nav">Goto Layout Nr</mat-radio-button>
+          <mat-radio-button value="pos">Artikel/Warengruppe</mat-radio-button>
+          <mat-radio-button value="empty">Nichts</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      @if (isNav()) {
+        <mat-form-field>
+          <mat-label>GoToLayout</mat-label>
+          <mat-select formControlName="gotoLayout" required>
+            @for (layout of layouts(); track layout.menuLayoutNo) {
+              <mat-option [value]="layout.menuLayoutNo">
+                {{ layout.displayText ? ('#' + layout.menuLayoutNo + ' – ' + layout.displayText) : ('Layout #' + layout.menuLayoutNo) }}
+              </mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      }
+
+      @if (isPos()) {
+        <div class="action-group" role="group" aria-label="KeyCode">
+          <div class="action-label">KeyCode</div>
+          <mat-radio-group formControlName="keyCode" aria-label="KeyCode auswählen" class="keycode-radios">
+            <mat-radio-button value="a">Artikel</mat-radio-button>
+            <mat-radio-button value="w">Warengruppe</mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+        <mat-form-field>
+          <mat-label>KeyFunction</mat-label>
+          <input type="number" matInput min="1" formControlName="keyFunction" required/>
+        </mat-form-field>
+      }
+    </form>
+  </mat-card-content>
+</mat-card>

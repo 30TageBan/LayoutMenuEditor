@@ -1,0 +1,112 @@
+<mat-toolbar>
+  <input
+    #fileInput
+    class="visually-hidden"
+    type="file"
+    accept=".xml,text/xml,application/xml"
+    (change)="onFileSelected()"
+    aria-label="XML Datei auswählen"
+  />
+
+  <div class="group">
+    <button mat-button type="button" (click)="openFilePicker()" aria-label="XML öffnen">
+      <mat-icon aria-hidden="true">upload</mat-icon>
+      Öffnen
+    </button>
+    <mat-divider [vertical]="true"></mat-divider>
+    <button mat-button type="button" (click)="createNew()" aria-label="Neues Template erstellen">
+      <mat-icon aria-hidden="true">create_new_folder</mat-icon>
+      Neu
+    </button>
+    <mat-divider [vertical]="true"></mat-divider>
+
+    <button mat-button type="button" (click)="toggleTemplateInput()" aria-label="Template laden">
+      <mat-icon aria-hidden="true">folder_open</mat-icon>
+      Template
+    </button>
+
+    @if (isTemplateInputOpen()) {
+      <input
+        #templateInput
+        class="template-input"
+        type="text"
+        [value]="templateName()"
+        (input)="templateName.set(($any($event.target).value ?? '').toString())"
+        (keydown)="onTemplateKeydown($event)"
+        autocomplete="off"
+        spellcheck="false"
+        aria-label="Template-Name"
+      />
+
+      <button
+        mat-button
+        type="button"
+        (click)="loadTemplate()"
+        [disabled]="!canLoadTemplate()"
+        aria-label="Template laden"
+      >
+        Laden
+      </button>
+      <button mat-button type="button" (click)="closeTemplateInput()" aria-label="Abbrechen">
+        Abbrechen
+      </button>
+    }
+  </div>
+
+  <span class="spacer"></span>
+
+  <div class="group">
+    <button
+      mat-button
+      type="button"
+      (click)="undo()"
+      [disabled]="!canUndo()"
+      aria-label="Rückgängig (Strg+Z)"
+    >
+      <mat-icon aria-hidden="true">undo</mat-icon>
+      Undo
+    </button>
+
+    <button
+      mat-button
+      type="button"
+      (click)="redo()"
+      [disabled]="!canRedo()"
+      aria-label="Wiederholen (Strg+Y / Strg+Shift+Z)"
+    >
+      <mat-icon aria-hidden="true">redo</mat-icon>
+      Redo
+    </button>
+
+    <mat-divider [vertical]="true"></mat-divider>
+
+    <button
+      mat-button
+      type="button"
+      (click)="copyButton()"
+      [disabled]="!canCopyButton()"
+      aria-label="Button kopieren (Strg+C)"
+    >
+      <mat-icon aria-hidden="true">content_copy</mat-icon>
+      Copy
+    </button>
+
+    <button
+      mat-button
+      type="button"
+      (click)="pasteButton()"
+      [disabled]="!canPasteButton()"
+      aria-label="Button einfügen (Strg+V)"
+    >
+      <mat-icon aria-hidden="true">content_paste</mat-icon>
+      Paste
+    </button>
+
+    <mat-divider [vertical]="true"></mat-divider>
+
+    <button mat-button type="button" (click)="download()" aria-label="XML herunterladen">
+      <mat-icon aria-hidden="true">download</mat-icon>
+      Download
+    </button>
+  </div>
+</mat-toolbar>

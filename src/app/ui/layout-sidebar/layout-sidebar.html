@@ -1,0 +1,55 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Menüs</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    @if (!hasDocument()) {
+      <p>Kein Dokument geladen.</p>
+    } @else {
+      <div class="actions">
+        <button mat-button type="button" (click)="createLayout()" aria-label="Neues Menü erstellen">
+          <mat-icon aria-hidden="true">add</mat-icon>
+          Neu
+        </button>
+        <mat-divider></mat-divider>
+        <button
+          mat-button
+          type="button"
+          (click)="requestDelete()"
+          [disabled]="layouts().length <= 1 || selectedLayoutNo() === 0 || selectedLayoutNo() == null"
+          aria-label="Ausgewähltes Menü löschen"
+        >
+          <mat-icon aria-hidden="true">delete</mat-icon>
+          Löschen
+        </button>
+      </div>
+
+      @if (confirmDelete()) {
+        <div class="confirm" role="alert">
+          <p>Menü wirklich löschen?</p>
+          <div class="confirm-actions">
+            <button mat-button type="button" (click)="deleteLayout()">Ja</button>
+            <button mat-button type="button" (click)="cancelDelete()">Abbrechen</button>
+          </div>
+        </div>
+      }
+
+      <div class="list" role="list" aria-label="Menü-Liste">
+        @for (item of layouts(); track item.layout.menuLayoutNo) {
+          <button
+            mat-button
+            type="button"
+            class="item"
+            [class.selected]="selectedViewIndex() === $index"
+            [attr.aria-current]="selectedViewIndex() === $index ? 'true' : null"
+            (click)="selectLayout($index)"
+          >
+            <span class="title">{{ item.layout.displayText || ('Layout ' + item.layout.menuLayoutNo) }}</span>
+            <span class="meta">#{{ item.layout.menuLayoutNo }}</span>
+          </button>
+        }
+      </div>
+    }
+  </mat-card-content>
+</mat-card>

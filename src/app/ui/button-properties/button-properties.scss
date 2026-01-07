@@ -1,0 +1,51 @@
+mat-card {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+mat-card-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.action-group {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.action-label {
+  font-size: 12px;
+  line-height: 1.2;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.action-radios {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Kompaktere Radios (für KeyCode): 2 Spalten statt nur untereinander */
+.keycode-radios {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 16px;
+}
+
+@media (max-width: 520px) {
+  .keycode-radios {
+    grid-template-columns: 1fr;
+  }
+}

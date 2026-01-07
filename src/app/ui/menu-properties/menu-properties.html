@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Menü Einstellungen</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    @if (!hasLayout()) {
+      <p>Kein Menü ausgewählt.</p>
+    }
+
+    <form [formGroup]="form">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input type="text" matInput formControlName="name" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Nr</mat-label>
+        <input type="number" matInput min="0" formControlName="number" required />
+        @if (form.controls.number.hasError('duplicate')) {
+          <mat-error>Diese Layout-Nr ist bereits vergeben.</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-slide-toggle formControlName="dontClose" labelPosition="before">
+        Dont Close
+      </mat-slide-toggle>
+    </form>
+  </mat-card-content>
+</mat-card>

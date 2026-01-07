@@ -1,0 +1,56 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>TouchButtons</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    @if (!hasDocument()) {
+      <p>Kein Template geladen. Nutze „Öffnen“ oder „Neu“ in der Toolbar.</p>
+    } @else {
+      <div
+        class="grid"
+        role="group"
+        aria-label="TouchButton Grid 6 mal 3"
+        cdkDropList
+        [cdkDropListSortingDisabled]="true"
+        [cdkDropListData]="buttons()"
+        (cdkDropListDropped)="onDrop($event)"
+      >
+        @for (btn of buttons(); track btn) {
+          @if (slotExists($index)) {
+            <div class="cell-wrap" cdkDrag [cdkDragData]="btn" [cdkDragDisabled]="!slotExists($index)">
+              <span class="drag-handle" cdkDragHandle aria-hidden="true">⋮⋮</span>
+              <button
+                mat-button
+                type="button"
+                class="cell"
+                [class.selected]="selectedIndex() === $index"
+                [class.font-black]="(btn.fontColor ?? 'BLACK') === 'BLACK'"
+                [class.font-orange]="btn.fontColor === 'ORANGE'"
+                [class.font-blue]="btn.fontColor === 'BLUE'"
+                [class.font-purple]="btn.fontColor === 'PURPLE'"
+                [attr.aria-pressed]="selectedIndex() === $index"
+                [attr.aria-label]="labelFor($index) + ' (ziehbar)'"
+                (click)="select($index)"
+                (dblclick)="openGoto($index)"
+                (keydown)="onCellKeydown($event, $index)"
+              >
+                <span class="cell-text">{{ btn.displayText }}</span>
+              </button>
+            </div>
+          } @else {
+            <button
+              mat-button
+              type="button"
+              class="cell create"
+              [attr.aria-label]="labelFor($index)"
+              (click)="create()"
+            >
+              <span class="cell-text">+ Erstellen</span>
+            </button>
+          }
+        }
+      </div>
+    }
+  </mat-card-content>
+</mat-card>

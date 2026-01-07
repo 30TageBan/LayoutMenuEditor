@@ -1,0 +1,1260 @@
+<Drawer>
+  <MenuLayout>
+    <MenuLayoutNo>0</MenuLayoutNo>
+    <DisplayText>Hauptmenü</DisplayText>
+    <DontClose>false</DontClose>
+    <TouchButton>
+      <DisplayText>Kraftstoffe</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>1</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>KFZ-Reinigung</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>2</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>KFZ-Zubehör</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>3</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Imbiss außer Haus</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>50</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Shop erm.MwSt</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>9</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Getränke</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>7</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Imbiss im Haus</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>70</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Shop v.MwSt</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>10</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Pfand</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>6</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Gutscheine &amp; CashBack</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>5</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Gasflaschen</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>20</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Zeitung</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>4</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Tabakwaren</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>18</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Paketdienst</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>33</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Telefonkarten 0%</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>32</KeyFunction>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>20</MenuLayoutNo>
+    <DisplayText>Gasflaschen</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>Rote Gasflaschen (ProGas)</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>21</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Graue Gasflaschen</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>22</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>5KG/ 11KG Kappe</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>2650</KeyFunction>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>21</MenuLayoutNo>
+    <DisplayText>Rote Gasflaschen (ProGas)</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText/>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Auf der Flasche muss ProGas stehen!</DisplayText>
+      <FontColor>BLUE</FontColor>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText/>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>5kg rot Gas + Pfand</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>23770</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>11kg rot Gas + Pfand</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>23772</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>33kg rot Gas + Pfand</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>23773</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>-5kg rot Pfand</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>23785</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>-11kg rot Pfand</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>23787</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>-33kg rot Pfand</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>23788</KeyFunction>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>22</MenuLayoutNo>
+    <DisplayText>Graue Gasflaschen</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText/>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Nur im Kauf oder im Tausch!</DisplayText>
+      <FontColor>BLUE</FontColor>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText/>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>5kg grau Gas + Nutzung</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>23775</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>11kg grau Gas + Nutzung</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>23776</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>11KG ALUGAS inkl. Nutzung</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>23777</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>-5k grau Nutzung</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>23790</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>-11kg grau Nutzung</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>23791</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>-11KG ALUGAS Nutzung</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>23792</KeyFunction>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>5</MenuLayoutNo>
+    <DisplayText>Gutscheine/CashBack</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>Gutschein 10,-</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>6312</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Gutschein 20,-</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>6313</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Gutschein 25,-</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>6325</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Gutschein 30,-</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>6326</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Gutschein 40,-</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>6372</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Gutschein 44,-</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>22771</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Gutschein 50,-</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>6373</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Gutschein variabel</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>22773</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>CashBack</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>91</KeyFunction>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>1</MenuLayoutNo>
+    <DisplayText>Kraftstoffe</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>Diesel</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>3</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>ADBlue</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>13</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>LPG</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>7</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Super E5</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>2</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Super E10</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>9</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Super Plus</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>4</KeyFunction>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>2</MenuLayoutNo>
+    <DisplayText>KFZ-Reinigung</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>Basis Pflege (6,90)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>8793</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Glanz Pflege (8,90)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>8792</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Politur Pflege (13,90)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>8789</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Basis Pflege Plus (8,90)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>19850</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Glanz Pflege Plus (10,90)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Politur Pflege Plus (15,90)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>8797</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Cabrio-Pflege (9,90)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>8791</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>HD-Reinigung</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>26</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>SB-Sauger (1,-)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Vorwäsche Token (0,50)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Vorsprüher</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>42</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>SB-Sauger (0,50)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>3</MenuLayoutNo>
+    <DisplayText>KFZ-Zubehör</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>AdBlue Kanister</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>20637</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>KFZ-Zubehör</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>12</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Schmierstoffe</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>10</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Frostschutz</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>11</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Klare Sicht</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>64</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>ARAL Heizöl</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>14</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Zwei Takt Tube</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Reservekanister 5L</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Reservekanister 10L</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>KFZ-Sicherung</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>4</MenuLayoutNo>
+    <DisplayText>Zeitung</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>Zeitung 0%</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>77</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Bild Mo.-Sa.</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Münsterländische Mo.-Fr.</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Zeitung erm.MwSt</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>19</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Bild So.</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Münsterländische Sa.</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Zeitung  v.MwSt</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>29</KeyFunction>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>6</MenuLayoutNo>
+    <DisplayText>Pfand</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>+ 0,08</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1006</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>+ 0,15</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1007</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>+ 0,25</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1008</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>+ 0,48</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1009</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>+ 1,50</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1012</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>+ 2,38</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1013</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>+ 3,10</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1015</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>+ 3,30</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1016</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>+ 3,42</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>1017</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>- 0,08</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1019</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>- 0,15</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1019</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>- 0,25</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1021</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>- 0,48</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1022</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>- 1,50</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1025</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>- 2,38</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1026</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>- 3,10</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1028</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>- 3,30</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1029</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>- 3,42</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1030</KeyFunction>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>7</MenuLayoutNo>
+    <DisplayText>Getränke</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>Getränke (Frei)</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>17</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Getränke (Ab 16J)</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>67</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Getränke (Ab 18J)</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>68</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Kaffeeautomat (2,-)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Mitarbeiter Kaffee</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>20443</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Getränke Kisten</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>8</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>+ Mehrwegbecherpfand (1,-)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1011</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>- Mehrwegbecherpfandrückgabe (1,-)</DisplayText>
+      <FontColor>ORANGE</FontColor>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>1024</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Pfand</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>6</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Red Bull Aktion 2x0,25 Ltr. + Pfand</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>6867</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>RedBull Aktion 4er Tray</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>22547</KeyFunction>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>8</MenuLayoutNo>
+    <DisplayText>Getränke Kisten</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>24er Krombacher/Veltins 0,33L + Pfand</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>20er Krombacher/Veltins 0,5L + Pfand</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>11er Kromacher 0,5L + Pfand</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>24er Kronsberg 0,33L + Pfand</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>20er Franziskaner 0,5L + Pfand</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>20er Erdinger 0,5L + Pfand</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>20er Padaborner 0,5L</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>20er Tyskie 0,5L + Pfand</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Corona 6er Träger 0,33L + Pfand</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>12er CocaCola 1L + Pfand</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>12er Vilsa / Emsland Quelle 1L + Pfand</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Pfand</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>6</GotoLayoutNo>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>50</MenuLayoutNo>
+    <DisplayText>Imbiss Außer Haus</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>Brötchen &amp; Gebäck</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>51</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Belegte Brötchen</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>53</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Fleisch</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>52</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Aktionen</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>54</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Imbiss außer Haus</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>23</KeyFunction>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>70</MenuLayoutNo>
+    <DisplayText>Imbiss Im Haus</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>Imbiss im Haus</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>22</KeyFunction>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>9</MenuLayoutNo>
+    <DisplayText>Shop erm.MwSt</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>Shop erm.MwSt</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>20</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Blumen erm.MwSt</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>21</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>TKK erm.MwSt</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>31</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Haribotüten (1,50)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>19709</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Haribotüten (3,-)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>21204</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Ice Cubes</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>(Positivbox 1,50?)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>21324</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>(Positivbox 2,-?)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>21326</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Crush Ice</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Chupa Chup</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>10</MenuLayoutNo>
+    <DisplayText>Shop v.MwSt</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>Shop v.MwSt</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>15</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>AVP</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>44</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>myNiehues</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>46</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Bußmann (HH)</DisplayText>
+      <POSKey>
+        <KeyCode>w</KeyCode>
+        <KeyFunction>54</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Streusalz Eimer 10KG (5,99)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>2594</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>GrillKetts 3kg</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Holz Kohle 2,5lg</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>51</MenuLayoutNo>
+    <DisplayText>Brötchen außer Haus</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>Normales</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Kürbiskern</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Weltmeister</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Sennerfladen/Kürbiskern Käse</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Kornquarkstange</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Wallnuss</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Kartoffel Hell</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Kartoffel Dunkel</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Dinkel</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Käsebrötchen 1,60?</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Croissant 1,50?</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Geflügelrolle 2,70?</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>KäseSchinkenBrötchen 1,80?</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Schoko/Käse Croissant 1,80?</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Überbackene Geflügelrolle 2,95?</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText/>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText/>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Börek Stange</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>52</MenuLayoutNo>
+    <DisplayText>Fleisch außer Haus</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>Frikadelle</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Frankfutter/Mettendchen</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Dünne Bockwurst</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Dicke Bockwurst</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Hähnchen Schnitzel</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Crispy Chicken</DisplayText>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Hackrib</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>54</MenuLayoutNo>
+    <DisplayText>Imbiss Action außer Haus</DisplayText>
+    <DontClose>true</DontClose>
+    <TouchButton>
+      <DisplayText>Kakao + 2. einf. bel. Brötchen 3,49</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>18811</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Erdbeermilch + 2 einf. bel. Brötchen 3,49</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>18812</KeyFunction>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+  <MenuLayout>
+    <MenuLayoutNo>53</MenuLayoutNo>
+    <DisplayText>Belegte Brötchen außer Haus</DisplayText>
+    <DontClose>false</DontClose>
+    <TouchButton>
+      <DisplayText>Einfaches Belegtes</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Frikadellen Brötchen</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Hähnchenschnitzel Brötchen</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Hackrib Brötchen</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Rühreibrötchen 3,20?</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Dicke Schinkenwurst</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Mett</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Ei</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Chicken Burger</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Leberkäse Brötchen</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Tuhnfisch</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Nutella</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+  </MenuLayout>
+</Drawer>

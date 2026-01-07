@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Validierung</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    @if (!hasDocument()) {
+      <p>Kein Dokument geladen.</p>
+    } @else {
+      @if (!hasIssues()) {
+        <p>Keine Warnungen.</p>
+      } @else {
+        <p>
+          <strong>{{ errorCount() }}</strong> Fehler, <strong>{{ warningCount() }}</strong> Warnungen
+        </p>
+        <ul class="list">
+          @for (issue of issues(); track issue.message) {
+            <li class="item" [class.is-error]="issue.level === 'error'" [class.is-warning]="issue.level === 'warning'">
+              <span class="badge">{{ issue.level === 'error' ? 'Fehler' : 'Warnung' }}</span>
+              <span class="msg">{{ issue.message }}</span>
+            </li>
+          }
+        </ul>
+      }
+    }
+  </mat-card-content>
+</mat-card>
+
