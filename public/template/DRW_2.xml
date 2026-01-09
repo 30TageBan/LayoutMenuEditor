@@ -54,14 +54,14 @@
       <GotoLayoutNo>5</GotoLayoutNo>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Gasflaschen</DisplayText>
-      <FontColor>PURPLE</FontColor>
-      <GotoLayoutNo>20</GotoLayoutNo>
-    </TouchButton>
-    <TouchButton>
       <DisplayText>Zeitung</DisplayText>
       <FontColor>PURPLE</FontColor>
       <GotoLayoutNo>4</GotoLayoutNo>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Gasflaschen</DisplayText>
+      <FontColor>PURPLE</FontColor>
+      <GotoLayoutNo>20</GotoLayoutNo>
     </TouchButton>
     <TouchButton>
       <DisplayText>Tabakwaren</DisplayText>
@@ -375,9 +375,10 @@
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Glanz Pflege Plus (10,90)</DisplayText>
+      <DisplayText>Cabrio-Pflege (9,90)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
+        <KeyFunction>8791</KeyFunction>
       </POSKey>
     </TouchButton>
     <TouchButton>
@@ -388,10 +389,30 @@
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Cabrio-Pflege (9,90)</DisplayText>
+      <!--
+Direkt 1€ auf die warengruppe 27
+-->
+      <DisplayText>SB-Sauger (1,-)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
-        <KeyFunction>8791</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <!--
+Direkt 0,50€ auf die warengruppe 41
+-->
+      <DisplayText>SB-Sauger (0,50)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <!--
+Direkt 0,50€ auf die warengruppe 34
+-->
+      <DisplayText>Vorwäsche Token (0,50)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
@@ -402,28 +423,10 @@
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>SB-Sauger (1,-)</DisplayText>
-      <POSKey>
-        <KeyCode>a</KeyCode>
-      </POSKey>
-    </TouchButton>
-    <TouchButton>
-      <DisplayText>Vorwäsche Token (0,50)</DisplayText>
-      <POSKey>
-        <KeyCode>a</KeyCode>
-      </POSKey>
-    </TouchButton>
-    <TouchButton>
       <DisplayText>Vorsprüher</DisplayText>
       <POSKey>
         <KeyCode>w</KeyCode>
         <KeyFunction>42</KeyFunction>
-      </POSKey>
-    </TouchButton>
-    <TouchButton>
-      <DisplayText>SB-Sauger (0,50)</DisplayText>
-      <POSKey>
-        <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
   </MenuLayout>
@@ -714,6 +717,9 @@
       </POSKey>
     </TouchButton>
     <TouchButton>
+      <!--
+Direkt 2€ auf die warengruppe 24
+-->
       <DisplayText>Kaffeeautomat (2,-)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
@@ -879,6 +885,18 @@
     <DisplayText>Imbiss Im Haus</DisplayText>
     <DontClose>true</DontClose>
     <TouchButton>
+      <DisplayText/>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText/>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText/>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText/>
+    </TouchButton>
+    <TouchButton>
       <DisplayText>Imbiss im Haus</DisplayText>
       <POSKey>
         <KeyCode>w</KeyCode>
@@ -1015,103 +1033,109 @@
     <DisplayText>Brötchen außer Haus</DisplayText>
     <DontClose>true</DontClose>
     <TouchButton>
-      <DisplayText>Normales</DisplayText>
+      <DisplayText>Normales Brötchen (0,50)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Kürbiskern</DisplayText>
+      <DisplayText>Kürbiskern Brötchen (0,95)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Weltmeister</DisplayText>
+      <DisplayText>Käsebrötchen (1,60)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Sennerfladen/Kürbiskern Käse</DisplayText>
+      <DisplayText>Helles Kartoffel Brötchen (1,20)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Kornquarkstange</DisplayText>
+      <DisplayText>Weltmeister Brötchen (0,95)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Wallnuss</DisplayText>
+      <DisplayText>KäseSchinkenBrötchen  (1,80)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Kartoffel Hell</DisplayText>
+      <DisplayText>Dunkles Kartoffel Brötchen (1,20)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Kartoffel Dunkel</DisplayText>
+      <DisplayText>Walnuss Brötchen (0,95)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Dinkel</DisplayText>
+      <DisplayText>Croissant (1,50)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Käsebrötchen 1,60?</DisplayText>
+      <DisplayText>Dinkel Brötchen (1,20)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Croissant 1,50?</DisplayText>
+      <DisplayText>Geflügelrolle (2,70)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Geflügelrolle 2,70?</DisplayText>
+      <DisplayText>Schoko Croissant (1,80)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>KäseSchinkenBrötchen 1,80?</DisplayText>
+      <DisplayText>Kornquarkstange Brötchen (1,20)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Schoko/Käse Croissant 1,80?</DisplayText>
+      <DisplayText>Überbackene Geflügelrolle (2,95)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Überbackene Geflügelrolle 2,95?</DisplayText>
+      <DisplayText>Käse Croissant (1,80)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText/>
+      <DisplayText>Sennerfladen Brötchen (1,20)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText/>
+      <DisplayText>Börek Stange (1,80)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Börek Stange</DisplayText>
+      <DisplayText>Käse Schinkel Croissant (1,80)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
@@ -1122,40 +1146,46 @@
     <DisplayText>Fleisch außer Haus</DisplayText>
     <DontClose>true</DontClose>
     <TouchButton>
-      <DisplayText>Frikadelle</DisplayText>
+      <DisplayText>Frikadelle (2,50)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Frankfutter/Mettendchen</DisplayText>
+      <DisplayText>Frankfutter (2,50)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Dünne Bockwurst</DisplayText>
+      <DisplayText>Mettendchen (2,50)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Dicke Bockwurst</DisplayText>
+      <DisplayText>Dünne Bockwurst (2,50)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Hähnchen Schnitzel</DisplayText>
+      <DisplayText>Dicke Bockwurst (3,-)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Crispy Chicken</DisplayText>
+      <DisplayText>Hähnchen Schnitzel (2,90)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+      </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Hackrib</DisplayText>
+      <DisplayText>Crispy Chicken (2,90)</DisplayText>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Hackrib (2,90)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
       </POSKey>
@@ -1166,18 +1196,92 @@
     <DisplayText>Imbiss Action außer Haus</DisplayText>
     <DontClose>true</DontClose>
     <TouchButton>
-      <DisplayText>Kakao + 2. einf. bel. Brötchen 3,49</DisplayText>
+      <DisplayText/>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Kombi Angebote (Mo. - Fr.)</DisplayText>
+      <FontColor>BLUE</FontColor>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText/>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Münsterland Kakao/Milch + 2. einf. bel. (4,50)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
         <KeyFunction>18811</KeyFunction>
       </POSKey>
     </TouchButton>
     <TouchButton>
-      <DisplayText>Erdbeermilch + 2 einf. bel. Brötchen 3,49</DisplayText>
+      <DisplayText>Münsterland Kakao/Milch + 1 Frika/Schnitzel (4,50)</DisplayText>
       <POSKey>
         <KeyCode>a</KeyCode>
         <KeyFunction>18812</KeyFunction>
       </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Münsterland Kakao/Milch + Croissant (3,-)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>18811</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Kaffe + 2. einf. bel. (4,50)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>18811</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Kaffe  + 1 Frika/Schnitzel (4,50)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>18812</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Kaffe + Croissant (3,-)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>18811</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText/>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Sonntags Angebot</DisplayText>
+      <FontColor>BLUE</FontColor>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText/>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>10 Normale (4,50)</DisplayText>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>5 Körner (4,50)</DisplayText>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText/>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Münsterland Kakao/Milch + Croissant (3,-)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>18811</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText>Kaffe + Croissant (3,-)</DisplayText>
+      <POSKey>
+        <KeyCode>a</KeyCode>
+        <KeyFunction>18811</KeyFunction>
+      </POSKey>
+    </TouchButton>
+    <TouchButton>
+      <DisplayText/>
     </TouchButton>
   </MenuLayout>
   <MenuLayout>

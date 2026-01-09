@@ -27,6 +27,17 @@
       </mat-form-field>
 
       <mat-form-field>
+        <mat-label>Kommentar</mat-label>
+        <textarea
+          matInput
+          formControlName="comment"
+          rows="3"
+          aria-describedby="button-comment-hint"
+        ></textarea>
+        <mat-hint id="button-comment-hint">Wird als XML-Kommentar (<!-- ... -->) exportiert.</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field>
         <mat-label>Farbe</mat-label>
         <mat-select formControlName="color">
           <mat-option [value]="null">Schwarz (Standart)</mat-option>

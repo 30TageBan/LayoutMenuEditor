@@ -13,16 +13,17 @@
         <p>
           <strong>{{ errorCount() }}</strong> Fehler, <strong>{{ warningCount() }}</strong> Warnungen
         </p>
-        <ul class="list">
-          @for (issue of issues(); track issue.message) {
-            <li class="item" [class.is-error]="issue.level === 'error'" [class.is-warning]="issue.level === 'warning'">
-              <span class="badge">{{ issue.level === 'error' ? 'Fehler' : 'Warnung' }}</span>
-              <span class="msg">{{ issue.message }}</span>
-            </li>
-          }
-        </ul>
+        <div class="scroll-container" role="region" aria-label="Validierungsliste">
+          <ul class="list">
+            @for (issue of issues(); track issue.message) {
+              <li class="item" [class.is-error]="issue.level === 'error'" [class.is-warning]="issue.level === 'warning'">
+                <span class="badge">{{ issue.level === 'error' ? 'Fehler' : 'Warnung' }}</span>
+                <span class="msg">{{ issue.message }}</span>
+              </li>
+            }
+          </ul>
+        </div>
       }
     }
   </mat-card-content>
 </mat-card>
-

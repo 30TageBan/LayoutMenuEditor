@@ -130,3 +130,17 @@ mat-card {
   cursor: grab;
   line-height: 1;
 }
+
+.cell.incomplete {
+  border-color: #b3261e;
+}
+
+.cell.incomplete:focus-visible {
+  outline-color: #b3261e;
+}
+
+.cell.incomplete.selected {
+  /* Wenn ausgewählt UND unvollständig: kombiniere Farben so, dass Rot dominiert */
+  border-color: #b3261e;
+  outline-color: #b3261e;
+}

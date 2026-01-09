@@ -2,6 +2,10 @@ mat-card {
   width: 100%;
 }
 
+mat-card-content {
+  overflow-x: hidden; /* horizontale Scrollbar verhindern */
+}
+
 .actions {
   display: flex;
   justify-content: flex-end;
@@ -48,4 +52,9 @@ mat-form-field {
   .keycode-radios {
     grid-template-columns: 1fr;
   }
+}
+
+/* Lange Labels/Hints sollen umbrechen, nicht breiter machen */
+mat-form-field, mat-label, mat-hint {
+  white-space: normal;
 }

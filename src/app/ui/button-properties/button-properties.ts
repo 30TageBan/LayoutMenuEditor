@@ -36,6 +36,8 @@ export class ButtonProperties {
     color: this.fb.control<ButtonColor | null>(null),
     action: this.fb.control<ButtonAction>('empty', { validators: [Validators.required] }),
 
+    comment: this.fb.control(''),
+
     // Action = nav
     gotoLayout: this.fb.control<number | null>(null),
 
@@ -67,6 +69,7 @@ export class ButtonProperties {
             name: '',
             color: null,
             action: 'empty',
+            comment: '',
             gotoLayout: null,
             keyCode: null,
             keyFunction: null,
@@ -83,6 +86,7 @@ export class ButtonProperties {
           name: btn.displayText,
           color: btn.fontColor,
           action: btn.action,
+          comment: btn.comment ?? '',
           gotoLayout: btn.gotoLayoutNo,
           keyCode: btn.posKeyCode,
           keyFunction: btn.posKeyFunction,
@@ -136,15 +140,12 @@ export class ButtonProperties {
     this.form.valueChanges.subscribe((value) => {
       if (!this.hasSelection()) return;
 
-      // Wir erlauben bewusst leeren Namen und (bei POS) leere KeyFunction.
-      // Daher blockieren wir nur, wenn es wirklich ein invalider Zustand ist.
-      //if (this.form.invalid) return;
-
       const action = (value.action ?? 'empty') as ButtonAction;
       const patch: Partial<TouchButton> = {
         displayText: value.name ?? '',
         fontColor: value.color ?? null,
         action,
+        comment: value.comment ?? '',
         gotoLayoutNo: action === 'nav' ? (value.gotoLayout ?? null) : null,
         posKeyCode: action === 'pos' ? (value.keyCode ?? null) : null,
         posKeyFunction: action === 'pos' ? (value.keyFunction ?? null) : null,

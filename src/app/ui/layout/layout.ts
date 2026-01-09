@@ -161,4 +161,20 @@ export class Layout {
       this.store.selectLayoutByNo(btn.gotoLayoutNo);
     }
   }
+
+  protected isIncomplete(btn: TouchButton | null | undefined): boolean {
+    if (!btn) return false;
+    if (btn.action === 'empty') return false;
+
+    if (btn.action === 'nav') {
+      return btn.gotoLayoutNo == null;
+    }
+
+    if (btn.action === 'pos') {
+      // KeyFunction darf fehlen; KeyCode ist Pflicht.
+      return btn.posKeyFunction == null;
+    }
+
+    return false;
+  }
 }

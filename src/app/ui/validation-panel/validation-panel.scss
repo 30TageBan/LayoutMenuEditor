@@ -2,6 +2,13 @@
   display: block;
 }
 
+/* Container im Card-Content begrenzen und Scrollbar bereitstellen */
+.scroll-container {
+  max-height: 75vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .list {
   margin: 0;
   padding: 0;
@@ -38,5 +45,6 @@
 
 .msg {
   flex: 1;
+  min-width: 0; /* verhindert horizontales Scrollen bei langen Texten */
+  word-wrap: break-word;
 }
-

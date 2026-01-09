@@ -9,6 +9,9 @@ export interface TouchButton {
   readonly fontColor: ButtonColor | null;
   readonly action: ButtonAction;
 
+  /** Optionaler Kommentar, wird als XML-Comment exportiert. */
+  readonly comment?: string | null;
+
   // action = nav
   readonly gotoLayoutNo: number | null;
 
@@ -21,6 +24,9 @@ export interface MenuLayout {
   readonly menuLayoutNo: number;
   readonly displayText: string;
   readonly dontClose: boolean;
+
+  /** Optionaler Kommentar, wird als XML-Comment exportiert. */
+  readonly comment?: string | null;
 
   /** Variable Anzahl Buttons; die UI zeigt max. GRID_SIZE Slots. */
   readonly touchButtons: readonly TouchButton[];
@@ -39,6 +45,7 @@ export function createEmptyButton(): TouchButton {
     displayText: '',
     fontColor: null,
     action: 'empty',
+    comment: null,
     gotoLayoutNo: null,
     posKeyCode: null,
     posKeyFunction: null,

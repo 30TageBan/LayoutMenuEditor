@@ -25,6 +25,7 @@ export class MenuProperties {
     name: this.fb.control('', { validators: [Validators.required] }),
     number: this.fb.control<number | null>(null, { validators: [Validators.required, Validators.min(0)] }),
     dontClose: this.fb.control(false),
+    comment: this.fb.control(''),
   });
 
   constructor() {
@@ -48,7 +49,7 @@ export class MenuProperties {
       const layout = this.selectedLayout();
       if (!layout) {
         this.form.disable({ emitEvent: false });
-        this.form.reset({ name: '', number: null, dontClose: false }, { emitEvent: false });
+        this.form.reset({ name: '', number: null, dontClose: false, comment: '' }, { emitEvent: false });
         return;
       }
 
@@ -58,6 +59,7 @@ export class MenuProperties {
           name: layout.displayText,
           number: layout.menuLayoutNo,
           dontClose: layout.dontClose,
+          comment: layout.comment ?? '',
         },
         { emitEvent: false },
       );
@@ -72,6 +74,7 @@ export class MenuProperties {
         displayText: value.name ?? '',
         menuLayoutNo: value.number ?? 1,
         dontClose: value.dontClose ?? false,
+        comment: value.comment ?? '',
       });
     });
   }

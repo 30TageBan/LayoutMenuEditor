@@ -125,6 +125,8 @@ export class LayoutXmlCodecService {
     const displayText = this.readText(node, 'DisplayText') ?? '';
     const dontClose = this.readBool(node, 'DontClose') ?? false;
 
+    const comment = this.readDirectChildComment(node);
+
     const touchButtonNodes = Array.from(node.getElementsByTagName('TouchButton'));
     const touchButtons = touchButtonNodes.map((btn) => this.parseTouchButton(btn));
 
@@ -132,6 +134,7 @@ export class LayoutXmlCodecService {
       menuLayoutNo,
       displayText,
       dontClose,
+      comment,
       touchButtons,
     };
   }
@@ -139,6 +142,8 @@ export class LayoutXmlCodecService {
   private parseTouchButton(node: Element): TouchButton {
     const displayText = this.readText(node, 'DisplayText') ?? '';
     const fontColor = this.readText(node, 'FontColor') as ButtonColor | null;
+
+    const comment = this.readDirectChildComment(node);
 
     const gotoLayoutNo = this.readNumber(node, 'GotoLayoutNo');
 
@@ -152,6 +157,7 @@ export class LayoutXmlCodecService {
       displayText,
       fontColor: this.normalizeColor(fontColor),
       action,
+      comment,
       gotoLayoutNo: action === 'nav' ? gotoLayoutNo : null,
       posKeyCode: action === 'pos' ? posKeyCode : null,
       posKeyFunction: action === 'pos' ? posKeyFunction : null,
@@ -187,6 +193,11 @@ export class LayoutXmlCodecService {
   private serializeMenuLayout(xml: XMLDocument, layout: MenuLayout): Element {
     const el = xml.createElement('MenuLayout');
 
+    const safeComment = this.toXmlCommentText(layout.comment ?? null);
+    if (safeComment) {
+      el.appendChild(xml.createComment(safeComment));
+    }
+
     el.appendChild(this.elText(xml, 'MenuLayoutNo', String(layout.menuLayoutNo)));
     el.appendChild(this.elText(xml, 'DisplayText', layout.displayText));
     el.appendChild(this.elText(xml, 'DontClose', layout.dontClose ? 'true' : 'false'));
@@ -200,6 +211,11 @@ export class LayoutXmlCodecService {
 
   private serializeTouchButton(xml: XMLDocument, btn: TouchButton): Element {
     const el = xml.createElement('TouchButton');
+
+    const safeComment = this.toXmlCommentText(btn.comment ?? null);
+    if (safeComment) {
+      el.appendChild(xml.createComment(safeComment));
+    }
 
     el.appendChild(this.elText(xml, 'DisplayText', btn.displayText));
     if (btn.fontColor) {
@@ -224,18 +240,50 @@ export class LayoutXmlCodecService {
     return el;
   }
 
+  private readDirectChildComment(parent: Element): string | null {
+    const comments: string[] = [];
+
+    for (const child of Array.from(parent.childNodes)) {
+      if (child.nodeType === Node.COMMENT_NODE) {
+        const text = (child.nodeValue ?? '').trim();
+        if (text.length) comments.push(text);
+      }
+
+      // "direkt" bedeutet: wir lesen nur Kommentare auf Top-Level im Element.
+      // Textnodes (Whitespace) ignorieren wir, bei echten Elementen lesen wir nicht tiefer.
+    }
+
+    if (comments.length === 0) return null;
+    return comments.join('\n');
+  }
+
+  private toXmlCommentText(input: string | null): string | null {
+    const trimmed = (input ?? '').trim();
+    if (!trimmed.length) return null;
+
+    // XML-Kommentare dürfen kein "--" enthalten und nicht mit "-" enden.
+    // Wir normalisieren so, dass Export immer gültiges XML bleibt.
+    const normalized = trimmed
+      .replaceAll('\r\n', '\n')
+      .replaceAll('--', '—') // em dash statt Doppelminus
+      .replace(/-$/u, '—')
+      .replaceAll('\u0000', '');
+
+    return normalized.length ? "\n"+normalized+"\n" : null;
+  }
+
   private elText(xml: XMLDocument, tagName: string, value: string): Element {
     const el = xml.createElement(tagName);
     el.textContent = value;
     return el;
   }
 
-
   createNewDocument(): LayoutDocument {
     const layout: MenuLayout = {
       menuLayoutNo: 0,
       displayText: 'Hauptmenü',
       dontClose: false,
+      comment: null,
       touchButtons: [],
     };
     return { layouts: [layout] };
@@ -246,6 +294,7 @@ export class LayoutXmlCodecService {
       menuLayoutNo: layoutNo,
       displayText: `Layout ${layoutNo}`,
       dontClose: false,
+      comment: null,
       touchButtons: [],
     };
   }

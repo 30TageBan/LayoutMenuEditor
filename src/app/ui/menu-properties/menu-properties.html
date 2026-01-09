@@ -25,6 +25,17 @@
       <mat-slide-toggle formControlName="dontClose" labelPosition="before">
         Dont Close
       </mat-slide-toggle>
+
+      <mat-form-field>
+        <mat-label>Kommentar</mat-label>
+        <textarea
+          matInput
+          formControlName="comment"
+          rows="3"
+          aria-describedby="menu-comment-hint"
+        ></textarea>
+        <mat-hint id="menu-comment-hint">Wird als XML-Kommentar (<!-- ... -->) exportiert.</mat-hint>
+      </mat-form-field>
     </form>
   </mat-card-content>
 </mat-card>

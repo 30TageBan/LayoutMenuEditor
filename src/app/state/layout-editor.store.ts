@@ -229,7 +229,9 @@ export class LayoutEditorStore {
     this.dirty.set(true);
   }
 
-  updateSelectedLayout(patch: Partial<Pick<MenuLayout, 'displayText' | 'menuLayoutNo' | 'dontClose'>>): void {
+  updateSelectedLayout(
+    patch: Partial<Pick<MenuLayout, 'displayText' | 'menuLayoutNo' | 'dontClose' | 'comment'>>,
+  ): void {
     const doc = this.document();
     if (!doc) return;
 
@@ -411,6 +413,7 @@ export class LayoutEditorStore {
       menuLayoutNo: 0,
       displayText: 'Hauptmenü',
       dontClose: false,
+      comment: null,
       touchButtons: [],
     };
 
@@ -461,6 +464,9 @@ export class LayoutEditorStore {
     if (!isEmptyText) return false;
     if (btn.fontColor != null) return false;
 
+    const comment = (btn.comment ?? '').trim();
+    if (comment.length > 0) return false;
+
     if (btn.action !== 'empty') return false;
 
     if (btn.gotoLayoutNo != null) return false;
@@ -505,43 +511,27 @@ export class LayoutEditorStore {
     const doc = this.document();
     const btnIndex = this.selectedButtonIndex();
     if (!doc || btnIndex == null) return;
-    if (btnIndex < 0 || btnIndex >= GRID_SIZE) return;
-
-    const layouts = doc.layouts.slice();
-    const layoutIndex = this.selectedLayoutIndex();
-    const currentLayout = layouts[layoutIndex];
-    if (!currentLayout) return;
-
-    // Falls es den Index noch nicht gibt, vorher erzeugen.
-    const nextButtons = currentLayout.touchButtons.slice(0, GRID_SIZE);
-    if (btnIndex >= nextButtons.length) {
-      for (let i = nextButtons.length; i <= btnIndex; i += 1) {
-        nextButtons.push(createEmptyButton());
-      }
-    }
-
-    const current = nextButtons[btnIndex] ?? createEmptyButton();
-    const next = { ...clip };
-    const isSame = JSON.stringify(current) === JSON.stringify(next);
-    if (isSame) return;
+    if (btnIndex >= GRID_SIZE) return;
 
     this.pushHistory(doc);
 
-    nextButtons[btnIndex] = next;
+    const layout = this.selectedLayout();
+    if (!layout) return;
 
-    // Nach dem Paste ggf. trailing-empties trimmen (nur sinnvoll, wenn wir ans Ende gepastet haben).
-    const trimmed = this.trimTrailingEmptyButtons(nextButtons);
+    // Defensive copy
+    const buttons = layout.touchButtons.slice();
+    buttons[btnIndex] = { ...clip };
 
-    layouts[layoutIndex] = {
-      ...currentLayout,
-      touchButtons: trimmed,
+    const updated: MenuLayout = {
+      ...layout,
+      touchButtons: buttons,
     };
+
+    const layouts = doc.layouts.slice();
+    const idx = this.selectedLayoutIndex();
+    layouts[idx] = updated;
 
     this.document.set({ ...doc, layouts });
     this.dirty.set(true);
-  }
-
-  clearButtonClipboard(): void {
-    this.buttonClipboard.set(null);
   }
 }
