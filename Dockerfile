@@ -9,12 +9,12 @@ WORKDIR /app
 RUN corepack enable
 
 COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile
+RUN npm install --frozen-lockfile
 
 COPY . .
 
 # Angular build (production default in angular.json)
-RUN pnpm build
+RUN npm build
 
 
 ### 2) Runtime Stage
@@ -29,3 +29,4 @@ COPY --from=build /app/dist/LayoutMenuEditor/browser /usr/share/nginx/html
 EXPOSE 8080
 
 CMD ["nginx", "-g", "daemon off;"]
+
