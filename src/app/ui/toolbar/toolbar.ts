@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { Router } from '@angular/router';
 import { LayoutEditorStore } from '../../state/layout-editor.store';
+import { LayoutPdfExportService } from '../../services/layout-pdf-export.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -16,6 +17,9 @@ import { LayoutEditorStore } from '../../state/layout-editor.store';
 export class Toolbar {
   private readonly store = inject(LayoutEditorStore);
   private readonly router = inject(Router);
+  private readonly pdfExport = inject(LayoutPdfExportService);
+
+  protected readonly isDownloadingPdf = signal(false);
 
   protected readonly fileInput = viewChild.required<ElementRef<HTMLInputElement>>('fileInput');
 
@@ -59,6 +63,41 @@ export class Toolbar {
     a.click();
 
     URL.revokeObjectURL(url);
+  }
+
+  protected readonly canDownloadPdf = computed(() => {
+    const doc = this.store.document();
+    return doc != null && doc.layouts.length > 0;
+  });
+
+  protected async downloadPdf(): Promise<void> {
+    const doc = this.store.document();
+    if (!doc || doc.layouts.length === 0) return;
+    if (this.isDownloadingPdf()) return;
+
+    this.isDownloadingPdf.set(true);
+    try {
+      const blob = await this.pdfExport.exportMenusToPdf(doc);
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'menus.pdf';
+      a.rel = 'noopener';
+      a.style.display = 'none';
+
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+
+      // Nach dem Klick erst später revoken, damit der Browser Zeit hat, den Download zu starten.
+      window.setTimeout(() => URL.revokeObjectURL(url), 10_000);
+    } catch (e) {
+      // Sichtbar machen, falls z.B. der Dynamic-Import oder PDF-Erzeugung fehlschlägt.
+      console.error('PDF-Export fehlgeschlagen', e);
+    } finally {
+      this.isDownloadingPdf.set(false);
+    }
   }
 
   protected toggleTemplateInput(): void {

@@ -108,5 +108,16 @@
       <mat-icon aria-hidden="true">download</mat-icon>
       Download
     </button>
+
+    <button
+      mat-button
+      type="button"
+      (click)="downloadPdf()"
+      [disabled]="!canDownloadPdf() || isDownloadingPdf()"
+      aria-label="PDF herunterladen"
+    >
+      <mat-icon aria-hidden="true">picture_as_pdf</mat-icon>
+      PDF
+    </button>
   </div>
 </mat-toolbar>

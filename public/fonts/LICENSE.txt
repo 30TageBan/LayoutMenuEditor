@@ -1,0 +1,7 @@
+Diese Anwendung bettet optional eine Unicode-Schrift (TTF) für den PDF-Export ein.
+
+Bitte lege eine lizenzkonforme Schriftdatei unter `public/fonts/` ab, z.B.:
+- DejaVuSans.ttf (DejaVu Fonts)
+- NotoSans-Regular.ttf / NotoSans-Bold.ttf (Google Noto)
+
+Die Lizenz der verwendeten Schrift muss zu deinem Projekt passen. Diese Datei ist nur ein Platzhalter-Hinweis und enthält keine Schriftdateien.
