@@ -9,12 +9,12 @@ WORKDIR /app
 RUN corepack enable
 
 COPY package.json pnpm-lock.yaml ./
-RUN npm install --frozen-lockfile
+RUN pnpm install --frozen-lockfile
 
 COPY . .
 
 # Angular build (production default in angular.json)
-RUN npm build
+RUN pnpm build
 
 
 ### 2) Runtime Stage
